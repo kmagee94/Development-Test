@@ -1,0 +1,59 @@
+@{
+    ViewBag.Title = "Buyer Contracts";
+}
+<ul class="nav nav-tabs">
+    <li role="presentation"><a href="/Buyers/Index">Home</a></li>
+    <li role="presentation" class="active"><a href="/Buyers/Contracts">Contracts</a></li>
+    <li role="presentation"><a href="/Buyers/Profile">Profile</a></li>
+</ul>
+<div class="container">
+  <h2> Buyer Contracts</h2>
+  <p>This is the buyers/contracts page. Here the company will be able to post a new contract by clicking on the new Contracts page.They can view history of their contracts, which can be minimized by cliking on Contract History header. </p>
+    
+    <form action="/Buyers/NewContract">
+        <br><br>
+        <button type="button" class="btn" onclick="location.href='/Buyers/NewContract'">Create New Contract</button>
+    </form>
+
+        <br><br>
+    <div class="panel-group" id="buyercontracts">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Contract History</a> </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+            <div class="container">           
+                <table class="table table-striped">
+                <thead>
+                <tr>   
+                    <th>Auction Date</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Utility</th>
+                    <th> Account Type </th>
+                    <th>Account Number</th>
+                    <th>Bid</th> </tr>
+                    </thead>
+                <tbody>        
+                <tr> <td> 3/14/2017</td>
+                <td> 3/24/2017</td>
+                <td> 3/24/2017</td>
+                <td> Duke Energy</td>
+                <td> commerical </td>
+                <td> 1234-567-89</td>
+                <td> $0.91/Kwh</td> </tr>
+                
+                <tr> <td> 2/1/2017</td>
+                <td> 5/14/2017</td>
+                <td> 5/14/2017</td>
+                <td> Small Energy</td>
+                <td> commerical </td>
+                <td> 2341-567-98</td>
+                <td> $0.80/Kwh</td>  </tr>
+                </tbody>
+             </table>
+            </div>
+      </div>
+    </div>
+    </div>
+    </div>

@@ -32,6 +32,7 @@ namespace BestBidEnergy
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Add framework services.
             services.AddDbContext<BestBidEnergyContext>();
 
             services.AddIdentity<ApplicationUser, IdentityRole>(config =>
@@ -42,9 +43,12 @@ namespace BestBidEnergy
             })
             .AddEntityFrameworkStores<BestBidEnergyContext>()
             .AddDefaultTokenProviders();
-
-            // Add framework services.
+            
             services.AddMvc();
+            
+            // Add application services.
+            services.AddTransient<IEmailSender, AuthMessageSender>();
+            services.AddTransient<ISmsSender, AuthMessageSender>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
