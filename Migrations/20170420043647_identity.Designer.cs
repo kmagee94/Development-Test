@@ -8,9 +8,10 @@ using BestBidEnergy.Data;
 namespace BestBidEnergy.Migrations
 {
     [DbContext(typeof(BestBidEnergyContext))]
-    partial class BestBidEnergyContextModelSnapshot : ModelSnapshot
+    [Migration("20170420043647_identity")]
+    partial class identity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.SerialColumn)

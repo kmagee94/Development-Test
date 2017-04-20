@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using BestBidEnergy.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -29,6 +30,16 @@ namespace BestBidEnergy
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<BestBidEnergyContext>();
+
+            services.AddIdentity<ApplicationUser, IdentityRole>(config =>
+            {
+                config.User.RequireUniqueEmail = true;
+                config.Password.RequireNonAlphanumeric = false;
+                config.Cookies.ApplicationCookie.AutomaticChallenge = false;
+            })
+            .AddEntityFrameworkStores<BestBidEnergyContext>()
+            .AddDefaultTokenProviders();
+
             // Add framework services.
             services.AddMvc();
         }
