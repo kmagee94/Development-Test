@@ -10,23 +10,25 @@ namespace BestBidEnergy.Models
         [Key]
         [Required]
         [StringLength(255)]
-        public string Username { get; set; }
-        [Required]
-        [StringLength(255)]
-        public string Email { get; set; }
+        public string UserID { get; set; }
     
         [StringLengthAttribute(255)]
         public string Phone { get; set; }
+
         [StringLength(255)]
         public string Company { get; set; }
+
         [Required]
         [StringLengthAttribute(255)]
         public string Account_Num { get; set; }
+
         [Required]
         [StringLengthAttribute(255)]
         public string Account_Type {get; set;}
+
         public int Credit_Rating {get; set;}
-         [Required]
+
+        [Required]
         [StringLengthAttribute(150)]
         public string Contact_Name {get; set;}
     }

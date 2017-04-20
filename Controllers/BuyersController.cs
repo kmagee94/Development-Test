@@ -18,11 +18,6 @@ namespace BestBidEnergy.Controllers
             return View();
         }
         [Authorize(Roles = "Buyers")]
-        public IActionResult Profile()
-        {
-            return View();
-        }
-        [Authorize(Roles = "Buyers")]
         public IActionResult Contracts()
         {
             return View();
