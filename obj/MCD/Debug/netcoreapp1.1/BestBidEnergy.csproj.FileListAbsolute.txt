@@ -1,0 +1,8 @@
+C:\AMIS3610\BestBidEnergy\bin\MCD\Debug\netcoreapp1.1\BestBidEnergy.deps.json
+C:\AMIS3610\BestBidEnergy\bin\MCD\Debug\netcoreapp1.1\BestBidEnergy.runtimeconfig.json
+C:\AMIS3610\BestBidEnergy\bin\MCD\Debug\netcoreapp1.1\BestBidEnergy.runtimeconfig.dev.json
+C:\AMIS3610\BestBidEnergy\obj\MCD\Debug\netcoreapp1.1\BestBidEnergy.AssemblyInfo.cs
+C:\AMIS3610\BestBidEnergy\bin\MCD\Debug\netcoreapp1.1\BestBidEnergy.dll
+C:\AMIS3610\BestBidEnergy\bin\MCD\Debug\netcoreapp1.1\BestBidEnergy.pdb
+C:\AMIS3610\BestBidEnergy\obj\MCD\Debug\netcoreapp1.1\BestBidEnergy.dll
+C:\AMIS3610\BestBidEnergy\obj\MCD\Debug\netcoreapp1.1\BestBidEnergy.pdb
