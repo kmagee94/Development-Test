@@ -7,11 +7,12 @@ namespace BestBidEnergy.Models
     [Table("AUCTIONS")]
     public class Auction
     {
-        [Required]
         [Key]
+        [Required]
         public int AuctionID { get; set; }
     
         public DateTime AuctionTime {get; set; }
+
         [Required]
         public int ContractID { get; set; }
     }

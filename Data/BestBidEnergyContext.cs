@@ -1,9 +1,10 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using BestBidEnergy.Models;
 
 namespace BestBidEnergy.Data
 {
-    public class BestBidEnergyContext : DbContext
+    public class BestBidEnergyContext : IdentityDbContext<ApplicationUser>
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
