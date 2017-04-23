@@ -1,0 +1,8 @@
+C:\3610 Foundations\DEV-Kathryn\bin\Debug\netcoreapp1.1\BestBidEnergy.deps.json
+C:\3610 Foundations\DEV-Kathryn\bin\Debug\netcoreapp1.1\BestBidEnergy.runtimeconfig.json
+C:\3610 Foundations\DEV-Kathryn\bin\Debug\netcoreapp1.1\BestBidEnergy.runtimeconfig.dev.json
+C:\3610 Foundations\DEV-Kathryn\bin\Debug\netcoreapp1.1\BestBidEnergy.dll
+C:\3610 Foundations\DEV-Kathryn\bin\Debug\netcoreapp1.1\BestBidEnergy.pdb
+C:\3610 Foundations\DEV-Kathryn\obj\Debug\netcoreapp1.1\BestBidEnergy.AssemblyInfo.cs
+C:\3610 Foundations\DEV-Kathryn\obj\Debug\netcoreapp1.1\BestBidEnergy.dll
+C:\3610 Foundations\DEV-Kathryn\obj\Debug\netcoreapp1.1\BestBidEnergy.pdb

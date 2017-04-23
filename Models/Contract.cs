@@ -10,12 +10,15 @@ namespace BestBidEnergy.Models
         [Key]
         [Required]
         [StringLength(255)]
+        [Column("ContractId")]
         public int ContractID { get; set; }
 
         [Required]
         [StringLength(255)]
+        [Column("BuyerUsername")]
         public string BuyerUserID { get; set; }
 
+        [Column("SupplierUsername")]  
         public string SupplierUserID { get; set; }
 
         [Required]

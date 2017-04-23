@@ -1,3 +1,5 @@
+@model IEnumerable<BestBidEnergy.Models.Contract> 
+
 @{
     ViewBag.Title = "Buyer Contracts";
 }
@@ -6,7 +8,7 @@
     <li role="presentation" class="active"><a href="/Buyers/Contracts">Contracts</a></li>
 </ul>
 <div class="container">
-  <h2> Buyer Contracts</h2>
+  <h2> Buyer Contracts - @ViewData["user"]</h2>
      
     <form action="/Buyers/NewContract">
         <br><br>
@@ -24,30 +26,30 @@
                 <table class="table table-striped">
                 <thead>
                 <tr>   
-                    <th>Auction Date</th>
+                    <th>Contract ID</th>
                     <th>Start Date</th>
                     <th>End Date</th>
-                    <th>Utility</th>
+                    <th>Utility Area</th>
                     <th> Account Type </th>
                     <th>Account Number</th>
-                    <th>Bid</th> </tr>
+                    <th>Price</th> </tr>
                     </thead>
                 <tbody>        
-                <tr> <td> 3/14/2017</td>
-                <td> 3/24/2017</td>
-                <td> 3/24/2017</td>
-                <td> Duke Energy</td>
-                <td> commerical </td>
-                <td> 1234-567-89</td>
-                <td> $0.91/Kwh</td> </tr>
                 
-                <tr> <td> 2/1/2017</td>
-                <td> 5/14/2017</td>
-                <td> 5/14/2017</td>
-                <td> Small Energy</td>
-                <td> commerical </td>
-                <td> 2341-567-98</td>
-                <td> $0.80/Kwh</td>  </tr>
+                
+            @foreach (var todo in Model)
+            {
+                <tr>
+                <td>@todo.ContractID</td>
+                <td>@todo.StartDate</td>
+                <td>@todo.EndDate</td>
+                <td>@todo.UtilityArea</td>
+                <td> TODO</td>
+                <td>TODO</td>
+                <td>@todo.Price</td>
+                </tr>
+            }
+
                 </tbody>
              </table>
             </div>
