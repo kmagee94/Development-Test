@@ -37,9 +37,14 @@ namespace BestBidEnergy.Controllers
             return View("Profile",c.ToArray());
         }
 
-        public IActionResult Auction()
+        public async Task<IActionResult> Auction()
         {
-            return View();
+            var user = await GetCurrentUser();
+            var userid = user.Id;
+
+            var c = from Suppliers in db.Suppliers where Suppliers.UserID == userid orderby Suppliers.UserID select Suppliers;
+
+            return View("Auction",c.ToArray());
         }
 
         public async Task<IActionResult> Contracts()
