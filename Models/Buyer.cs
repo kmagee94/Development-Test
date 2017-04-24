@@ -10,6 +10,7 @@ namespace BestBidEnergy.Models
         [Key]
         [Required]
         [StringLength(255)]
+        [Column ("Username")]
         public string UserID { get; set; }
     
         [StringLengthAttribute(255)]

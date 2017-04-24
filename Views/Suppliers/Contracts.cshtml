@@ -1,0 +1,109 @@
+﻿@model IEnumerable<BestBidEnergy.Models.Contract> 
+
+@{
+    ViewBag.Title = "Contracts";
+}
+
+@{
+  IEnumerable<BestBidEnergy.Models.Contract> upcoming = ViewData["upcoming"] as IEnumerable<BestBidEnergy.Models.Contract>;
+IEnumerable<BestBidEnergy.Models.Contract> won = ViewData["won"] as IEnumerable<BestBidEnergy.Models.Contract>;
+}
+
+<ul class="nav nav-tabs">
+    <li role="presentation"><a href="/Suppliers/Index">Home</a></li>
+    <li role="presentation" class="active"><a href="/Suppliers/Contracts">Contracts</a></li>
+    <li role="presentation"><a href="/Suppliers/Auction">Auction</a></li>
+</ul>
+
+<div class="container" >
+      <h2>Supplier Contracts </h2> 
+       <div class="panel-group" id="buyercontracts">
+    
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Upcoming Contracts</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+        <div class="panel-body">
+            <div class="container">       <table class="table table-hover">
+    <thead>
+              <tr> 
+                  <th>Contract ID</th>
+                  <th>Start Date</th>
+                   <th>End Date</th>
+                    <th>Utility</th>
+                    <th>Account Number</th>
+                    <th> Account Type </th>
+                     <th>Average kWh</th>
+                      <th>Price</th>
+      </thead>
+      <tbody>
+           @foreach (var todo in upcoming)
+            {
+                <tr>
+                <td>@todo.ContractID</td>
+                <td>@todo.StartDate</td>
+                <td>@todo.EndDate</td>
+                <td>@todo.UtilityArea</td>
+                <td> TODO</td>
+                <td>TODO</td>
+                <td>@todo.AvgKwh</td>
+                <td>@todo.Price</td>
+                </tr>
+            }
+                
+             </tbody>
+            
+            </table>
+            </div>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    
+      <div class="panel-group" id="buyercontracts">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Contracts Won </a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse in">
+        <div class="panel-body">
+            <div class="container">           
+  <table class="table table-hover">
+    <thead>
+              <tr>  <th>Contract ID</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Utility</th>
+                    <th>Account Number</th>
+                    <th>Price</th> 
+                    </tr>
+      </thead>
+      <tbody>
+         @foreach (var todo in won)
+            {
+              <tr>  
+                <td>@todo.ContractID</td>
+                <td>@todo.StartDate</td>
+                <td>@todo.EndDate</td>
+                <td>@todo.UtilityArea</td>
+                <td>TODO</td>
+                <td>@todo.Price</td>
+                  </tr>
+            }
+                </tbody>
+            
+            </table>
+            </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    
+        
+</div>

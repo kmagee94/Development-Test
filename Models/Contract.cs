@@ -54,7 +54,8 @@ namespace BestBidEnergy.Models
         public string UtilityArea{get; set;}
 
         [Required]
-        public int AvgkWh {get; set;}
+        [Column("AvgkWh")]
+        public int AvgKwh {get; set;}
         
     }
 }

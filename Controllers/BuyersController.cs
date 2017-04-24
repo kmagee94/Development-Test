@@ -33,8 +33,16 @@ namespace BestBidEnergy.Controllers
         [Authorize(Roles = "Buyers")]
         public async Task<IActionResult> Index()
         {
-            return View();
+            var user = await GetCurrentUser();
+            var userid = user.Id;
+
+            var c = from Buyers in db.Buyers where Buyers.UserID == userid orderby Buyers.UserID select Buyers;
+
+
+
+            return View("Profile",c.ToArray());
         }
+
         [Authorize(Roles = "Buyers")]
         public async Task<IActionResult> Contracts()
         {
@@ -43,8 +51,6 @@ namespace BestBidEnergy.Controllers
 
             var c = from Contracts in db.Contracts where Contracts.BuyerUserID == userid orderby Contracts.StartDate select Contracts;
 
-
-            ViewData["user"] = userid;
 
 
             return View(c.ToArray());
