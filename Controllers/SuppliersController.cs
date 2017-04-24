@@ -26,9 +26,15 @@ namespace BestBidEnergy.Controllers
             db = context;
             _userManager = userManager;
         }
-        public IActionResult Index()
+        [Authorize(Roles = "Suppliers")]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var user = await GetCurrentUser();
+            var userid = user.Id;
+
+            var c = from Suppliers in db.Suppliers where Suppliers.UserID == userid orderby Suppliers.UserID select Suppliers;
+
+            return View("Profile",c.ToArray());
         }
 
         public IActionResult Auction()

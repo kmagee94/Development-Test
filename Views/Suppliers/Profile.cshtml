@@ -1,4 +1,5 @@
-﻿@{
+﻿@model IEnumerable<BestBidEnergy.Models.Supplier> 
+@{
     ViewBag.Title = "Profile";
 }
 <style>
@@ -21,16 +22,18 @@ td {
 </ul>
     <div class="container">
           <h2>Supplier Profile</h2>
+@foreach (var todo in Model){   
   <table>
         <tr> 
             <th class="text-right" >Name: </th>
-            <td>Supplier Name</td></tr>
+            <td> @todo.UserID </td></tr>
         <tr>
             <th class="text-right"> Company:</th>
-            <td>Company Name </td></tr>   
+            <td> @todo.Company </td></tr>   
         <tr> 
             <th class="text-right">Account Number:</th>  
-                <td>Acct#</td>
+                <td>@todo.AccountNum</td>
             </tr>
         </table>
+        }
     </div>
